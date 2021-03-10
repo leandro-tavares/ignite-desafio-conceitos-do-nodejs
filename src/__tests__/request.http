@@ -1,0 +1,53 @@
+@baseURL = http://localhost:3333
+@todoId = 71872c99-6e5f-4479-b9c0-ff2bb49dfa37
+
+### Users
+POST {{baseURL}}/users 
+Content-Type: application/json
+
+{
+  "name": "Leandro Tavares",
+  "username": "lt"
+}
+
+
+### List Todos 
+GET {{baseURL}}/todos 
+username: lt
+Content-Type: application/json
+
+
+### New Todo
+POST {{baseURL}}/todos
+username: lt
+Content-Type: application/json
+
+{
+  "title": "Tarefa teste 3",
+  "deadline": "2021-03-15"
+}
+
+
+### Update Todo
+PUT {{baseURL}}/todos/{{todoId}}
+username: lt
+Content-Type: application/json
+
+{
+  "title": "Tarefa teste 1.1",
+  "deadline": "2021-03-16"
+}
+
+
+### Update Todo Status
+PATCH {{baseURL}}/todos/{{todoId}}/done
+username: lt
+Content-Type: application/json
+
+
+
+### Delete Todo
+DELETE {{baseURL}}/todos/{{todoId}}
+username: lt
+Content-Type: application/json
+

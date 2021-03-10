@@ -1,3 +1,4 @@
+/* eslint-disable */
 const request = require('supertest');
 const { validate } = require('uuid');
 

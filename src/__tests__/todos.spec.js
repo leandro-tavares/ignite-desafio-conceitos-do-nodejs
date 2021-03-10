@@ -1,3 +1,4 @@
+/* eslint-disable */
 const request = require('supertest');
 const { validate } = require('uuid');
 
@@ -30,7 +31,7 @@ describe('Todos', () => {
       expect.arrayContaining([
         todoResponse.body
       ]),
-    )
+    );
   });
 
   it('should be able to create a new todo', async () => {
